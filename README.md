@@ -18,22 +18,22 @@ For example::
 
     static void event_log_handler(const gchar *log_domain,
                                   GLogLevelFlags log_level,
-				  const gchar *message,
-				  gpointer user_data)
+                                  const gchar *message,
+                                  gpointer user_data)
     {
             /*
-	     * TODO: Handle your event here. This usually means saving it to a
-	     * list of some sort (in-memory or on-disk) which can then be
-	     * reported to a central location later. It could also just be used
-	     * as an additional layer of application logging.
-	     */
+             * TODO: Handle your event here. This usually means saving it to a
+             * list of some sort (in-memory or on-disk) which can then be
+             * reported to a central location later. It could also just be used
+             * as an additional layer of application logging.
+             */
     }
 
 
     void init()
     {
             g_log_set_handler("gtk-event-tracker", G_LOG_LEVEL_DEBUG,
-	                      event_log_handler, NULL);
+                              event_log_handler, NULL);
     }
 
 
